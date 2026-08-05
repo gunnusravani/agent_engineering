@@ -1,0 +1,76 @@
+Google Cloud Release Notes Summary (August 2026)
+
+==================================================
+1. ARTIFICIAL INTELLIGENCE & MACHINE LEARNING
+==================================================
+- Gemini Enterprise:
+  * Added end-to-end tracing support across data connector workflows with new execute_tool and invoke_connector trace spans in Trace Explorer for improved observability.
+- Gemini Enterprise Agent Platform / CodeMender CLI:
+  * Process-Level Sandboxing (Preview): Added OS-level sandboxing for agent execution of commands, tests, and scripts to prevent unintended workspace modifications via the --sandbox flag.
+  * Automatic CLI Updates: Added automated background update checks for interactive sessions.
+- API Gateway (Model Routing):
+  * In-Flight Transcoding & Model Routing: Managed traffic management layer to accept OpenAI-compatible prompt requests, transcode them in-flight, and route them to Vertex AI Model Garden endpoints (Gemini, Claude, GPT).
+
+==================================================
+2. SECURITY, OBSERVABILITY & GOVERNANCE
+==================================================
+- Security Command Center:
+  * Malicious Skill Detectors: Released runtime threat detectors for GKE, Cloud Run, and Agent Platform that identify when a malicious AI agent skill is executed or loaded.
+  * AI Protection in Standard Tier: Expanded AI Security Dashboard and baseline inventory support to project-level Standard tier subscriptions.
+- Google SecOps (formerly Chronicle):
+  * Threat Hunt Agent (Public Preview): Autonomous AI-driven threat hunting powered by Gemini and grounded in Mandiant expertise and MITRE ATT&CK tactics.
+  * SIEM Ingestion Telemetry: Feed activity monitoring and debugging integrated into Cloud Logging and Gemini Cloud Assist.
+  * SOAR Migration: Extended Stage 2 migration deadline to November 30, 2026.
+- Identity and Access Management (IAM):
+  * Privileged Access Manager (PAM): Introduced Organization Policy custom constraints for PAM entitlements and grants (Preview). Added full `gcloud iam access-policies` CLI management commands.
+- VPC Service Controls:
+  * Added preview integration support for Google Antigravity in Gemini Enterprise.
+
+==================================================
+3. COMPUTE, HYBRID & CONTAINERS
+==================================================
+- Google Kubernetes Engine (GKE):
+  * TPU Dynamic Subslicing (GA): Subslicing/Dynamic Subslicing is now Generally Available on Ironwood (TPU7x) for topologies smaller than 4x4x4 (e.g., 2x2x1, 2x2x4).
+  * Kubectl Support: Updated default kubectl binary in Cloud SDK to v1.35.6.
+- Google Distributed Cloud (GDC - VMware & Bare Metal):
+  * Release 1.33.1100-gke.72: Released running on Kubernetes v1.33.11-gke.100. Removed deprecated csi-snapshot-validation-webhook in bare metal in favor of native Common Expression Language (CEL) CRD validation.
+- Compute Engine:
+  * Hyperdisk ML Throughput: Reduced minimum provisioned throughput from 100 MiB/s to 20 MiB/s per instance when attached to more than 20 instances.
+  * Local SSDs & Security: Added 3500 GB and 7000 GB local SSD partition options and added Arm Confidential Compute Architecture (CCA) support for confidential VMs.
+- Google Cloud VMware Engine:
+  * Capacity Allocations (Preview): Global node reservation capability organized by physical Placement Groups (PGs). Added CMEK encryption key support via gcloud vmware private-clouds.
+
+==================================================
+4. DATABASES, DATA ANALYTICS & STORAGE
+==================================================
+- BigQuery:
+  * Cross-Cloud Connections (Preview): Query AWS, Azure, and Salesforce Data 360 directly across all BigQuery regions.
+  * JDBC Telemetry (GA): OpenTelemetry tracing/logging integrated with automatic exports to Google Cloud Observability.
+  * Hybrid Search: Restored hybrid search capabilities (VECTOR_SEARCH combining semantic + keyword search, and AI.SEARCH HYBRID mode).
+- AlloyDB for PostgreSQL:
+  * BM25 Search (Preview): Support for Best Matching 25 (BM25) full-text search indexing via the pg_textsearch extension on PostgreSQL 17/18 instances.
+- Cloud SQL (MySQL, PostgreSQL, SQL Server):
+  * DNS Automation (GA): Automatic per-instance DNS provisioning and global write endpoint resolution for Private Service Connect (PSC) instances.
+  * Enhanced Backups: Change or switch associated backup plans without deleting existing plans first.
+  * MySQL Resource Groups: CPU/Memory workload resource group allocation added for Cloud SQL MySQL.
+  * Zero-Downtime Re-encryption: Support for zero-downtime KMS re-encryption on supported instance types.
+- Backup and DR:
+  * Directly switch Cloud SQL backup plans across matching vault regions.
+
+==================================================
+5. NETWORKING & INFRASTRUCTURE
+==================================================
+- Cloud CDN: Edge native image optimization (resizing, cropping, format conversion at Google network edge) for global Application Load Balancers (Preview).
+- Cloud Load Balancing: Regular expression URL rewrites (regexRewrite) for route rules in URL maps (Preview).
+- Virtual Private Cloud (VPC): Support for v2 IPv4 public advertised prefixes for Bring Your Own IP (BYOIP) using Standard Tier IP addresses (Preview).
+- Network Intelligence Center: Connectivity Tests now support validating Database Migration Service (DMS) private connections to Cloud SQL.
+
+==================================================
+6. DEVELOPER TOOLS & ENTERPRISE SERVICES
+==================================================
+- Google Cloud SDK (v579.0.0):
+  * Removed legacy gcloud api-registry mcp enable/disable commands.
+  * Promoted gcloud quotas CLI surface and gcloud functions upgrade to GA.
+- Cloud Workstations: Updated JetBrains preconfigured base images to 2026.1 / 2026.2 releases (CLion, GoLand, IntelliJ Ultimate, PyCharm, WebStorm, etc.).
+- Looker: Added token usage metrics and query feedback review tabs for Conversational Analytics in the System Activity dashboard (Preview).
+- Contact Center as a Service (CCaaS): Dashboard enhancements including sub-team filtering, average chat concurrency tracking, and warm transfer metrics.

@@ -16,4 +16,4 @@
 I learned how to use Antigravity and what are Agents
 
 ## Challenges
-No challenges faced, everything happened smoothely
+No challenges faced, everything happened smoothly
