@@ -1,0 +1,10 @@
+account_id: brightleaf-002
+name: Brightleaf Financial Services
+domain: brightleaf.example.com
+industry: financial_services
+region: united_states
+employee_count: 8500
+
+known_challenges:
+  - Regulatory compliance reporting overhead
+  - Legacy mainframe modernization

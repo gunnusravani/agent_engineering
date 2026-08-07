@@ -1,0 +1,15 @@
+account_id: acme-001
+name: Acme Manufacturing Corp
+domain: acmemanufacturing.example.com
+industry: manufacturing
+region: united_states
+employee_count: 12000
+annual_revenue_usd: 3500000000
+
+known_challenges:
+  - Legacy PLC integration bottlenecks on line 4
+  - High paper-based quality assurance audit delays
+
+buying_signals:
+  - Appointed VP of Digital Manufacturing in Q2
+  - Published job postings for Industrial GenAI Engineers

@@ -1,0 +1,9 @@
+account_id: meridian-003
+name: Meridian Automation Labs
+domain: meridianlabs.example.com
+industry: industrial_automation
+region: europe
+employee_count: null  # Unknown
+
+known_challenges:
+  - Exploring smart factory initiatives
